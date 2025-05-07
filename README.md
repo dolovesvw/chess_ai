@@ -1,9 +1,6 @@
-# chess_ai
-chess_ai for eve project
-
 ---
 
-# Eve Chess AI
+# Chess Ai for the Eve Project
 
 This is a standalone chess AI built around the Stockfish engine, designed for use by **Eve**, an AI VTuber that I am making. The goal of this project is to allow Eve to play entertaining, fair, and challenging games of chess against human players and show a range of skill levels in her moves.
 
