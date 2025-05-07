@@ -97,10 +97,8 @@ eve-chess-ai/
 ---
 
 ## 🧪 Development
--Python 3.8+
-
--Stockfish 17+
-
+- Python 3.8+
+- Stockfish 17+
 - Unit tests can be run with:
 ```bash
 pytest
