@@ -1,0 +1,80 @@
+{
+  "session_id": "c30d0d9b-c16f-4a1f-982f-ed9e543387ab",
+  "user_id": "test_user",
+  "platform": "test",
+  "user_color": "w",
+  "difficulty": 3,
+  "created_at": "2025-05-07T10:07:58.020081",
+  "last_activity": "2025-05-07T10:08:01.037441",
+  "moves_played": 4,
+  "is_active": true,
+  "outcome": null,
+  "outcome_reason": null,
+  "state_fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "move_history": [
+    {
+      "move_number": 1,
+      "player": "ai",
+      "from": [
+        4,
+        6
+      ],
+      "to": [
+        4,
+        4
+      ],
+      "algebraic": "e7e5",
+      "time": 4.76837158203125e-06,
+      "evaluation": 0,
+      "timestamp": "2025-05-07T10:07:58.021895"
+    },
+    {
+      "move_number": 2,
+      "player": "user",
+      "from": [
+        1,
+        7
+      ],
+      "to": [
+        2,
+        5
+      ],
+      "algebraic": "b8c6",
+      "time": 0.8932721614837646,
+      "evaluation": -25.0,
+      "timestamp": "2025-05-07T10:07:58.915772"
+    },
+    {
+      "move_number": 3,
+      "player": "ai",
+      "from": [
+        4,
+        1
+      ],
+      "to": [
+        4,
+        3
+      ],
+      "algebraic": "e2e4",
+      "time": 1.9073486328125e-06,
+      "evaluation": 0,
+      "timestamp": "2025-05-07T10:07:58.916469"
+    },
+    {
+      "move_number": 4,
+      "player": "user",
+      "from": [
+        2,
+        5
+      ],
+      "to": [
+        3,
+        3
+      ],
+      "algebraic": "c6d4",
+      "time": 2.120469093322754,
+      "evaluation": -60.0,
+      "timestamp": "2025-05-07T10:08:01.037459"
+    }
+  ]
+}

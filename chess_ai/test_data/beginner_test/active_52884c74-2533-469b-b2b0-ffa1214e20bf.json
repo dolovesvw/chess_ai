@@ -1,0 +1,112 @@
+{
+  "session_id": "52884c74-2533-469b-b2b0-ffa1214e20bf",
+  "user_id": "test_user",
+  "platform": "test",
+  "user_color": "w",
+  "difficulty": 1,
+  "created_at": "2025-05-07T10:07:47.862167",
+  "last_activity": "2025-05-07T10:07:49.893196",
+  "moves_played": 6,
+  "is_active": true,
+  "outcome": null,
+  "outcome_reason": null,
+  "state_fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "move_history": [
+    {
+      "move_number": 1,
+      "player": "ai",
+      "from": [
+        4,
+        1
+      ],
+      "to": [
+        4,
+        3
+      ],
+      "algebraic": "e2e4",
+      "time": 4.0531158447265625e-06,
+      "evaluation": 0,
+      "timestamp": "2025-05-07T10:07:47.862522"
+    },
+    {
+      "move_number": 2,
+      "player": "user",
+      "from": [
+        1,
+        7
+      ],
+      "to": [
+        2,
+        5
+      ],
+      "algebraic": "b8c6",
+      "time": 0.015378236770629883,
+      "evaluation": -75.0,
+      "timestamp": "2025-05-07T10:07:47.878143"
+    },
+    {
+      "move_number": 3,
+      "player": "ai",
+      "from": [
+        3,
+        1
+      ],
+      "to": [
+        3,
+        3
+      ],
+      "algebraic": "d2d4",
+      "time": 2.3126602172851562e-05,
+      "evaluation": 0,
+      "timestamp": "2025-05-07T10:07:48.883681"
+    },
+    {
+      "move_number": 4,
+      "player": "user",
+      "from": [
+        2,
+        5
+      ],
+      "to": [
+        3,
+        3
+      ],
+      "algebraic": "c6d4",
+      "time": 0.0017590522766113281,
+      "evaluation": -235.0,
+      "timestamp": "2025-05-07T10:07:48.886941"
+    },
+    {
+      "move_number": 5,
+      "player": "ai",
+      "from": [
+        6,
+        0
+      ],
+      "to": [
+        5,
+        2
+      ],
+      "algebraic": "g1f3",
+      "time": 2.09808349609375e-05,
+      "evaluation": 0,
+      "timestamp": "2025-05-07T10:07:49.890384"
+    },
+    {
+      "move_number": 6,
+      "player": "user",
+      "from": [
+        5,
+        6
+      ],
+      "to": [
+        5,
+        4
+      ],
+      "algebraic": "f7f5",
+      "time": 0.0011951923370361328,
+      "evaluation": -145.0,
+      "timestamp": "2025-05-07T10:07:49.893207"
+    }
+  ]
+}

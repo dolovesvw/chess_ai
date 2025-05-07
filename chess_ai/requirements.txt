@@ -1,0 +1,41 @@
+# Requirements for Eve's Chess AI system
+# -----------------------------------------------------
+
+# Chess engine and board representation
+python-chess>=1.9.0    # Python chess library for board representation and move validation
+stockfish>=3.28.0      # Python interface to Stockfish chess engine
+
+# Opening book management
+chess-opening-book>=1.2.0  # For opening theory and repertoire support
+
+# Utilities
+numpy>=1.22.0         # For numerical operations in evaluation
+tqdm>=4.64.0          # For progress indicators during engine training/setup
+
+# =============================================================================
+# Stockfish Installation Instructions
+# =============================================================================
+# 
+# 1. Install Stockfish chess engine (required before using this module):
+#
+#    macOS (using Homebrew):
+#    $ brew install stockfish
+#
+#    Ubuntu/Debian:
+#    $ sudo apt-get install stockfish
+#
+#    Windows:
+#    - Download from https://stockfishchess.org/download/
+#    - Extract the executable to a known location
+#    - Add to PATH or specify the path in the code
+#
+# 2. Verify installation:
+#    $ stockfish --version
+#
+# 3. Install the Python dependencies:
+#    $ pip install -r requirements.txt
+#
+# Note: The python-stockfish package will look for the Stockfish executable 
+# in your PATH. If it's not in PATH, you'll need to specify the path to the 
+# executable when initializing the Stockfish object.
+
