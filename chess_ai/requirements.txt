@@ -14,7 +14,7 @@ python-chess>=1.9.0    # Python chess library for board representation and move 
 stockfish>=3.28.0      # Python interface to Stockfish chess engine
 
 # Opening book management
-chess-opening-book>=1.2.0  # For opening theory and repertoire support
+# chess-opening-book>=1.2.0  # For opening theory and repertoire support - REMOVED (not available in PyPI)
 
 # Utilities
 numpy>=1.22.0         # For numerical operations in evaluation
