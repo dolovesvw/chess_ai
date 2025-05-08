@@ -1,6 +1,14 @@
 # Requirements for Eve's Chess AI system
 # -----------------------------------------------------
 
+# =============================================================================
+# Lichess Bot API Integration
+# =============================================================================
+#
+# Dependencies for Lichess.org API integration
+berserk>=0.13.1      # Python client for the Lichess API
+requests>=2.28.0     # HTTP library for API requests
+python-dotenv>=0.20.0  # For managing environment variables (API tokens)
 # Chess engine and board representation
 python-chess>=1.9.0    # Python chess library for board representation and move validation
 stockfish>=3.28.0      # Python interface to Stockfish chess engine
