@@ -30,6 +30,7 @@ This module is intended to be integrated into the main [Eve project (Private Rep
 ## 🛠️ Installation
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/your-username/eve-chess-ai.git
    cd eve-chess-ai
@@ -46,28 +47,18 @@ This module is intended to be integrated into the main [Eve project (Private Rep
 pip install -r requirements.txt
 ```
 
----
+To run use
 
-## 🚀 Usage
-### Basic Example
-```python
-from eve_chess_ai import EveChessAI
-
-ai = EveChessAI(level='1500')  # Options: '800', '1500', '2500'
-ai.start_game()
-
-move = ai.get_best_move(fen="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1")
-print(f"Eve plays: {move}")
 ```
-
-### Integrate with Eve
-- Expose a simple API or method calls for Eve to retrieve moves in real-time during her streams.
-- Use with a board visualizer or online chess platform interface.
+source venv/bin/activate && python3 -c "from chess_ai.bot_runner import LichessBotRunner; bot = LichessBotRunner(); bot.start()"
+```
 
 ---
 
 ## 🔧 Configuration
+
 You can configure:
+
 - Elo strength: Alters depth and evaluation parameters.
 - Blunder chance: Introduces deliberate mistakes.
 - Move randomness: Slight variability to simulate non-deterministic play.
@@ -76,27 +67,19 @@ You can configure:
 ---
 
 ## 📁 Project Structure
+
 ```bash
-Copy
-Edit
-eve-chess-ai/
-├── engines/              # Stockfish binaries
-├── eve_chess_ai/         # Main Python package
-│   ├── engine_interface.py
-│   ├── logic.py
-│   └── ...
-├── tests/                # Unit tests
-├── config.yaml           # AI behavior settings
-├── requirements.txt
-└── README.md
+
 ```
 
 ---
 
 ## 🧪 Development
+
 - Python 3.8+
 - Stockfish 17+
 - Unit tests can be run with:
+
 ```bash
 pytest
 ```
@@ -104,10 +87,13 @@ pytest
 ---
 
 ## 📜 License
+
 Apache Commons 2.0 License. See LICENSE for more details.
 
 ### 🤖 About Eve
+
 This chess module is part of Eve, a modular AI VTuber designed to entertain, engage, and play games with audiences on Twitch and YouTube.
 
 ### 📬 Contributing
+
 Pull requests, feedback, and feature requests are welcome (I DID NOT MAKE THEY WORK YET SO PLEASE HOLD ON BEFORE YOU DO THAT)!
