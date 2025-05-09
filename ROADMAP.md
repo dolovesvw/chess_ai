@@ -32,14 +32,14 @@
 
    ### AND/OR
 
-```python
+   ```python
    # Sample data structure
    {
        "position_hash": "abc123",
        "best_moves": [{"move": "e4", "win_rate": 0.65}],
        "common_errors": [{"move": "f6", "type": "tactical"}]
    }
-```
+   ```
 
 ### **Adaptive Personality**
 - Dynamic difficulty adjustment
