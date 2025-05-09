@@ -30,6 +30,17 @@
    }
    ```
 
+   ### AND/OR
+
+```python
+   # Sample data structure
+   {
+       "position_hash": "abc123",
+       "best_moves": [{"move": "e4", "win_rate": 0.65}],
+       "common_errors": [{"move": "f6", "type": "tactical"}]
+   }
+```
+
 ### **Adaptive Personality**
 - Dynamic difficulty adjustment
 - Win/loss-based style modulation
@@ -56,6 +67,36 @@
 | Meta-Learning Controller | Optimizes learning rate/strategies |
 | Automated Puzzle Generation | Creates custom training positions |
 
+---
+
+## Advanced Learning Features
+
+### 1. Mistake Analysis Engine
+```markdown
+- **Error Classification:**
+  - Tactical (missed fork/pin/skewer)
+  - Positional (weak squares/bad bishop)
+  - Time pressure (blitz mistakes)
+  - Personality-induced (over-aggression/etc.)
+
+- **Learning Response:**
+  - Targeted puzzle training
+  - Positional drill generation
+  - Time management adjustment
+```
+
+### 2. Brilliant Move Detection
+```python
+def detect_brilliancy(move, game):
+    criteria = [
+        move['centipawn_loss'] > 300,
+        stockfish_eval_change(move) > 2.0,
+        human_consensus_rating(move) > 4.5/5,
+        not in_opening_book(move)
+    ]
+    return sum(criteria) >= 3
+```
+
 ### **Enhanced Human Simulation**
 ```mermaid
 graph TD
@@ -79,7 +120,7 @@ graph TD
 ## 🧪 Validation Metrics
 
 ## Implementation Roadmap
-A. Post-Game Analysis Module
+### A. Post-Game Analysis Module
 
 ```markdown
 - [ ] `analysis/learn.py` - Core learning system
@@ -94,7 +135,7 @@ A. Post-Game Analysis Module
   - Reinforces strong patterns
 ```
 
-B. Real-Time Learning Features
+### B. Real-Time Learning Features
 
 ```python
 # During game execution:
@@ -106,7 +147,7 @@ def make_move(position):
     return move
 ```
 
-C. Improvement loops
+### C. Improvement loops
 
 **Short-Term (per game)**
 - Mistake rate reduction
@@ -116,3 +157,60 @@ C. Improvement loops
 - ELO gain per 100 games
 - Human likeness score (via Turing tests)
 - Training efficiency improvements
+
+---
+
+### Example Learning Scenario
+
+**When AI loses a game:**
+1) Identifies critical mistake (move 24 ...Qc7??)
+2) Classifies error (missed back-rank mate pattern)
+3) Updates knowledge base:
+  - Increases weight for back-rank checks
+  - Adjusts king safety evaluation
+  - Generates 10 similar positions for review
+
+4) Adjusts personality:
+  - Reduces 'complacency' parameter
+  - Increases 'defensive_alertness' by 15%
+
+---
+
+### Phase 1: Basic Learning (2 weeks)
+
+- Implement game history storage
+- Build position analysis framework
+- Add mistake tagging system
+
+### Phase 2: Active Learning (3 weeks)
+
+- Create training feedback loops
+- Implement opponent modeling
+- Add adaptive time controls
+
+### Phase 3: Meta-Learning (4 weeks)
+
+- Neural network for strategy selection
+- Automated parameter tuning
+- Personality evolution algorithms
+
+---
+
+## Technical Requirements
+
+**New Dependencies:**
+
+```python
+# requirements.txt additions
+scikit-learn>=1.0  # For pattern recognition
+redis>=4.0  # For knowledge storage
+tensorflow>=2.8  # For advanced learning
+```
+
+**Storage Requirements:**
+- ~1MB per 1000 positions (compressed)
+- Redis cluster for production deployment
+
+**Performance Impact:**
+- <5% overhead during games
+- Nightly training jobs for major updates
