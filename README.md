@@ -6,7 +6,7 @@
 
 A standalone chess AI built around the Stockfish engine designed to play on [Lichess](https://lichess.org/), created specifically for **Eve**, an AI VTuber. This sophisticated AI integrates with the Lichess platform, allowing for dynamic skill adjustments and human-like gameplay that ranges from casual to expert level.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Purpose](#-purpose)
 - [Quick Start](#-quick-start)
@@ -18,7 +18,7 @@ A standalone chess AI built around the Stockfish engine designed to play on [Lic
 - [Documentation](#-documentation)
 - [References](#-references)
 
-## 🎯 Purpose
+## Purpose
 
 Eve uses this AI module to:
 
@@ -49,44 +49,44 @@ echo "LICHESS_API_TOKEN=your_token_here" > .env
 python run_lichess_bot.py
 ```
 
-## 🎮 Features
+## Features
 
-### 🌐 Lichess.org Integration
+### Lichess.org Integration
 
 - Complete Lichess API integration for online play
 - Bot account management
 - Challenge acceptance and game management
 - Real-time game streaming and move execution
 
-### ♟️ Advanced Chess Engine
+### ♟Advanced Chess Engine
 
 - Stockfish integration with personality-based move selection
 - Customizable playing styles (aggressive, defensive, creative, positional, solid)
 - Opening book knowledge with personality-preferred openings
 - Dynamic evaluation and decision making
 
-### 🧠 Human-like Gameplay
+### "Human-like" Gameplay
 
 - ELO rating range from 800 (beginner) to 2500+ (expert)
 - Deliberate introduction of human-like errors based on skill level
 - Occasional brilliant moves that exceed the set skill level
 - Naturalistic move selection with varied play styles
 
-### 🎭 Personality System
+### Personality System
 
 - Five distinct chess personalities affecting move selection
 - Personality-specific commentary and evaluation
 - Opening preferences based on personality traits
 - Adaptable confidence levels that affect play style
 
-### 📊 Analysis and Evaluation
+### Analysis and Evaluation
 
 - Real-time position evaluation
 - Move confidence metrics
 - Game state tracking and management
 - Detailed move explanation and commentary
 
-## 🏗 Technical Architecture
+## Technical Architecture
 
 The Chess AI is built with a modular architecture consisting of several key components:
 
@@ -112,7 +112,7 @@ The Chess AI is built with a modular architecture consisting of several key comp
 
 The system uses a custom `ChessState` representation internally, with conversion utilities for the python-chess library and Lichess API formats. This allows for consistent state management across different components.
 
-## 📥 Installation
+## Installation
 
 ### Prerequisites
 
@@ -185,7 +185,7 @@ To use this project with Lichess, you need a Lichess BOT account:
 python -m chess_ai.lichess_bot setup
 ```
 
-## 🚀 Usage
+## Usage
 
 ### Running the Bot
 
