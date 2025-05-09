@@ -12,11 +12,21 @@
    - Position hashing with Zobrist keys
    - Redis storage for move statistics
    ```python
-   # Sample data structure
+   # Proposed data structure for learned knowledge
    {
-       "position_hash": "abc123",
-       "best_moves": [{"move": "e4", "win_rate": 0.65}],
-       "common_errors": [{"move": "f6", "type": "tactical"}]
+    "position_hash": "a1b2c3...",
+    "best_moves": [
+        {"move": "e4", "win_rate": 0.62, "usage_count": 42},
+        {"move": "d4", "win_rate": 0.58, "usage_count": 37}
+    ],
+    "common_mistakes": [
+        {"move": "f4", "error_type": "positional", "severity": 0.8}
+    ],
+    "position_features": {
+        "material_balance": +0.3,
+        "king_safety": 0.6,
+        "pawn_structure": "isolated"
+    }
    }
    ```
 
@@ -66,24 +76,37 @@ graph TD
 - Interactive mistake heatmaps
 - Personality trait radar charts
 
-## 📅 Suggested Timeline
-
-**Phase 1 (0-4 weeks)**
-- Implement basic learning database
-- Add post-game analysis
-- Upgrade Stockfish integration
-
-**Phase 2 (4-8 weeks)**
-- Develop adaptive personality system
-- Build monitoring dashboards
-- Implement opponent modeling
-
-**Phase 3 (8+ weeks)**
-- Neural network integration
-- Distributed learning systems
-- Advanced visualization tools
-
 ## 🧪 Validation Metrics
+
+## Implementation Roadmap
+A. Post-Game Analysis Module
+
+```markdown
+- [ ] `analysis/learn.py` - Core learning system
+  - Win/loss attribution modeling
+  - Mistake classification (tactical/positional/blunder)
+  - Brilliant move detection
+- [ ] `storage/knowledge_db.py` - Redis/PostgreSQL interface
+  - Position hashing via Zobrist hashing
+  - Compressed storage of learned patterns
+- [ ] `adaptation/adjuster.py` - Dynamic behavior modification
+  - Adjusts mistake probability based on learned weaknesses
+  - Reinforces strong patterns
+```
+
+B. Real-Time Learning Features
+
+```python
+# During game execution:
+def make_move(position):
+    move = engine.get_move(position)
+    if self.learning_mode:
+        anticipatory_learning(position, move)  # Predict outcomes before they happen
+        update_heatmaps(position)  # Track piece activity patterns
+    return move
+```
+
+C. Improvement loops
 
 **Short-Term (per game)**
 - Mistake rate reduction
@@ -93,11 +116,3 @@ graph TD
 - ELO gain per 100 games
 - Human likeness score (via Turing tests)
 - Training efficiency improvements
-
----
-
-This roadmap:
-1. Prioritizes immediately valuable features  
-2. Groups related functionalities  
-3. Includes concrete technical specs  
-4. Provides measurable success criteria
